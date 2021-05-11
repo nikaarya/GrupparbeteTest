@@ -1,0 +1,55 @@
+/*Tänk på att alla globala färger, fonter och styles ska ligga i app.vue
+ */
+container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2.0fr 2.0fr 2.0fr 2.0fr;
+    grid-template-areas:
+    "header header "
+    "nav nav "
+    "left right"
+    "footer footer";
+    grid-gap: 20px;
+    height: 100vh;
+}
+
+h1 {
+    grid-area: header;
+    font-family: "Comic Sans MS";
+    font-size: 34px;
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+.left {
+    grid-area: left;
+}
+.right {
+    grid-area: right;
+}
+
+
+nav ul {
+    grid-area: nav;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+nav a {
+    flex: auto;
+    flex: 1; /* Betyder att varje flex i detta fallet a i nav kommer att anpassas efter fösnterets storlek och bli lika stora */
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #999;
+}
+
+footer ul {
+    grid-area: footer;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
